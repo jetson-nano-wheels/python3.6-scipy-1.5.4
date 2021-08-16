@@ -30,7 +30,7 @@ setup(
     packages=find_packages(where='src'),
     python_requires='>=3.6, <4',
     install_requires=[
-        'numpy==1.19.4',
+        'https://github.com/jetson-nano-wheels/python3.6-numpy-1.19.4/releases/download/v0.0.1/numpy-1.19.4-cp36-cp36m-linux_aarch64.whl',
         'scipy==1.5.4'
     ],
     # ext_modules=[
