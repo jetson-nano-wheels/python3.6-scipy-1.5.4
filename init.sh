@@ -85,7 +85,7 @@ echo "Downloading scipy."
 set -euo pipefail
 pip download scipy==${scipy_version}
 
-
+set +e
 installed=$(pip list --local --format freeze --exclude pkg_resources)
 numpy_current_version=$(echo -n "${installed}" | grep -E '^numpy[=><]+' | sed -E -e 's/^.*[=><]+//')
 if [[ "${numpy_current_version}" == "1.19.5" ]] ; then
